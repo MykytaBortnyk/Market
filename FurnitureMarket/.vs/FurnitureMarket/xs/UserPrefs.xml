@@ -1,0 +1,47 @@
+﻿<Properties StartupConfiguration="{48EC5E98-AB98-4206-83C7-6284F5B8DEA4}|Default">
+  <MonoDevelop.Ide.ItemProperties.FurnitureMarket PreferredExecutionTarget="/Applications/Microsoft Edge Dev.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="FurnitureMarket/Controllers/AccountController.cs">
+    <Files>
+      <File FileName="FurnitureMarket/Views/Shared/_Layout.cshtml" Line="1" Column="1" />
+      <File FileName="FurnitureMarket/Startup.cs" Line="27" Column="36" />
+      <File FileName="FurnitureMarket/Controllers/AuthController.cs" Line="16" Column="21" />
+      <File FileName="AppCore/Models/Identity/AppUser.cs" Line="7" Column="6" />
+      <File FileName="AppCore/Models/Identity/Cart.cs" Line="6" Column="25" />
+      <File FileName="AppCore/Models/Product.cs" Line="10" Column="19" />
+      <File FileName="AppCore/Models/Catalog.cs" Line="9" Column="1" />
+      <File FileName="FurnitureMarket/Controllers/AccountController.cs" Line="14" Column="56" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="FurnitureMarket" expanded="True">
+            <Node name="AppCore" expanded="True">
+              <Node name="Models" expanded="True">
+                <Node name="Identity" expanded="True" />
+              </Node>
+            </Node>
+            <Node name="FurnitureMarket" expanded="True">
+              <Node name="Dependencies" expanded="True">
+                <Node name="FrameworkReferences" expanded="True" />
+              </Node>
+              <Node name="Controllers" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Auth" selected="True" />
+              </Node>
+            </Node>
+            <Node name="Infrastructure" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.AppCore FirstBuild="True" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Infrastructure FirstBuild="True" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

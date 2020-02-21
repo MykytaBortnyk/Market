@@ -1,0 +1,29 @@
+﻿<Properties StartupConfiguration="{B39668FD-E7BD-46E1-9E71-ECDEA1065120}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MarketAPI/Services/ProductsRepository.cs">
+    <Files>
+      <File FileName="MarketAPI/Models/Product.cs" Line="16" Column="45" />
+      <File FileName="MarketAPI/Models/Catalog.cs" />
+      <File FileName="MarketAPI/Data/CatalogContext.cs" />
+      <File FileName="MarketAPI/Controllers/ProductsController.cs" />
+      <File FileName="MarketAPI/Services/ProductsRepository.cs" Line="23" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="MarketAPI" expanded="True">
+            <Node name="MarketAPI" expanded="True">
+              <Node name="Interfaces" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.MarketAPI FirstBuild="True" PreferredExecutionTarget="/Applications/Microsoft Edge Dev.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
