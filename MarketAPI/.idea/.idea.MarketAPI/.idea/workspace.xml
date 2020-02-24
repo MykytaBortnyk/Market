@@ -1,33 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="617412e4-d37e-444a-a7cb-e13a2cb8f78f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MarketAPI.sln" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MarketAPI/Controllers/ProductsController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MarketAPI/Data/CatalogContext.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MarketAPI/Interfaces/IProductsRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MarketAPI/MarketAPI.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MarketAPI/Models/Catalog.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MarketAPI/Models/Product.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MarketAPI/Program.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MarketAPI/Properties/launchSettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MarketAPI/Services/ProductsRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MarketAPI/Startup.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MarketAPI/appsettings.Development.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MarketAPI/appsettings.json" afterDir="false" />
-    </list>
+    <list default="true" id="617412e4-d37e-444a-a7cb-e13a2cb8f78f" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="MarketAPI" />
+  </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/MarketAPI/Startup.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MarketAPI/Controllers/ProductsController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MarketAPI/Interfaces/IProductsRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/MarketAPI/Services/ProductsRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MarketAPI/Models/AppUser.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/MarketAPI/Models/BaseEntity.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/MarketAPI/Models/Product.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -36,7 +28,11 @@
       <list>
         <option value="$PROJECT_DIR$/MarketAPI/Models/BaseEntity.cs" />
         <option value="$PROJECT_DIR$/MarketAPI/Models/Product.cs" />
+        <option value="$PROJECT_DIR$/MarketAPI/Interfaces/IProductsRepository.cs" />
         <option value="$PROJECT_DIR$/MarketAPI/Services/ProductsRepository.cs" />
+        <option value="$PROJECT_DIR$/MarketAPI/Controllers/ProductsController.cs" />
+        <option value="$PROJECT_DIR$/MarketAPI/Models/AppUser.cs" />
+        <option value="$PROJECT_DIR$/MarketAPI/Startup.cs" />
       </list>
     </option>
   </component>
@@ -105,6 +101,8 @@
       <updated>1582301862452</updated>
       <workItem from="1582301873815" duration="137000" />
       <workItem from="1582302198584" duration="1944000" />
+      <workItem from="1582354226656" duration="3400000" />
+      <workItem from="1582374356837" duration="5057000" />
     </task>
     <servers />
   </component>

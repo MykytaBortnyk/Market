@@ -6,7 +6,6 @@ namespace MarketAPI.Data
 {
     public class CatalogContext : DbContext
     {
-
         public DbSet<Product> Products { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

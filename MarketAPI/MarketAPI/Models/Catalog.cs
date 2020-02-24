@@ -5,6 +5,6 @@ namespace MarketAPI.Models
 {
     public class Catalog
     {
-        public List<Product> Products { get; set; }
+        public ICollection<Product> Products { get; set; }
     }
 }

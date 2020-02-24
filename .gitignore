@@ -1,0 +1,8 @@
+
+MarketAPI/.idea/*
+MarketAPI/.vs/*
+MarketAPI/MarketAPI/bin/*
+MarketAPI/MarketAPI/obj/*
+MarketAPI/PseudoClient/*
+MarketAPI/PseudoClient/PseudoClient.csproj
+MarketAPI/PseudoClient/Program.cs

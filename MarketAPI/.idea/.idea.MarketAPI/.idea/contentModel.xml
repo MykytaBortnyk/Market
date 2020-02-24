@@ -13,11 +13,15 @@
           <e p="CatalogContext.cs" t="Include" />
         </e>
         <e p="Interfaces" t="Include">
+          <e p="ICartRepository.cs" t="Include" />
           <e p="IProductsRepository.cs" t="Include" />
+          <e p="IRepository.cs" t="Include" />
         </e>
         <e p="MarketAPI.csproj" t="IncludeRecursive" />
         <e p="Models" t="Include">
+          <e p="AppUser.cs" t="Include" />
           <e p="BaseEntity.cs" t="Include" />
+          <e p="Cart.cs" t="Include" />
           <e p="Catalog.cs" t="Include" />
           <e p="Product.cs" t="Include" />
         </e>
@@ -33,6 +37,7 @@
           <e p="launchSettings.json" t="Include" />
         </e>
         <e p="Services" t="Include">
+          <e p="CartRepository.cs" t="Include" />
           <e p="ProductsRepository.cs" t="Include" />
         </e>
         <e p="Startup.cs" t="Include" />

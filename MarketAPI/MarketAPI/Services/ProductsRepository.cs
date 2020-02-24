@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using MarketAPI.Data;
 using MarketAPI.Interfaces;
@@ -8,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace MarketAPI.Services
 {
-    public class ProductsRepository : IProductsRepository<Product>
+    public class ProductsRepository<T> : IRepository<T> where T : Product
     {
         private readonly CatalogContext _catalogContext;
 
@@ -17,39 +18,66 @@ namespace MarketAPI.Services
             _catalogContext = catalogContext;
         }
 
+        public void Delete(Guid id)
+        {
+            var product = Get(id);
+
+            if (product != null) _catalogContext.Set<T>().Remove(product);
+
+            _catalogContext.SaveChanges();
+        }
+
         public async Task DeleteAsync(Guid id)
         {
-            var product = await _catalogContext.Products.FirstOrDefaultAsync(p => p.Id == id);
+            var product = await GetAsync(id);
 
-            if (product != null)
-            {
-                _catalogContext.Products.Remove(product);
-            }
+            if (product != null) _catalogContext.Set<T>().Remove(product);
+
+            await _catalogContext.SaveChangesAsync();
         }
 
-        public bool DoesItemExist(Guid id)
+        public async Task<bool> DoesItemExist(Guid id)
         {
-            throw new NotImplementedException();
+            return await _catalogContext.Products.AnyAsync(p => p.Id == id);
         }
 
-        public Task<Product> Get(Guid id)
+        public T Get(Guid id)
         {
-            throw new NotImplementedException();
+            return _catalogContext.Set<T>().Find(id);
         }
 
-        public Task<IEnumerable<Product>> GetAllAsync()
+        public async Task<T> GetAsync(Guid id)
         {
-            throw new NotImplementedException();
+            return await _catalogContext.Set<T>().FirstOrDefaultAsync(p => p.Id == id);
         }
 
-        public Task InsertAsync(Product item)
+        public IEnumerable<T> Get()
         {
-            throw new NotImplementedException();
+            return _catalogContext.Set<T>().ToList();
+        }
+        
+        public async Task<IEnumerable<T>> GetAsync()
+        {
+            return await _catalogContext.Set<T>().ToListAsync();
+        }
+        
+        public void Create(T item)
+        {
+            _catalogContext.Set<T>().Add(item);
         }
 
-        public Task UpdateAsync(Product item)
+        public async Task CreateAsync(T item)
         {
-            throw new NotImplementedException();
+            await _catalogContext.Set<T>().AddAsync(item);
+
+            await _catalogContext.SaveChangesAsync();
+        }
+
+        public void Update(T item)
+        {
+            _catalogContext.Entry(item).State = EntityState.Modified;
+
+            _catalogContext.SaveChanges();
         }
     }
 }

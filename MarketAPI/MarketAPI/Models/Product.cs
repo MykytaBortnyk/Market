@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Collections;
+
 namespace MarketAPI.Models
 {
-    public class Product : BaseEntity
+    public class Product : BaseEntity//, IAggregateRoot
     {
         public string Title { get; set; }
 
@@ -14,5 +16,19 @@ namespace MarketAPI.Models
         public int ItemsLeft { get; set; } 
 
         public string ImageUri { get; set; }
+
+        //public ICollection
     }
+    public class SomeTable : Product
+    {
+        public int SomePropOfTable { get; set; }
+    }
+
+    public class SomeChair : Product
+    {
+        public string SomePropOfChair { get; set; }
+    }
+
+    public interface IAggregateRoot
+    { }
 }
