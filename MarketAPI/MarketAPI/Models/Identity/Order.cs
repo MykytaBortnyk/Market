@@ -15,5 +15,11 @@ namespace MarketAPI.Models.Identity
         public AppUser AppUser { get; set; }
 
         public ICollection<Product> OrderItems { get; set; }
+
+        public double TotalPrice { get; set; }
+
+        public double TotalItems { get; set; }
+
+        //TODO: Add some byuer info
     }
 }

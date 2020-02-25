@@ -6,6 +6,7 @@ using MarketAPI.Data;
 using MarketAPI.Interfaces;
 using MarketAPI.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
 
 namespace MarketAPI.Services
 {
@@ -18,20 +19,16 @@ namespace MarketAPI.Services
             _catalogContext = catalogContext;
         }
 
-        public void Delete(Guid id)
+        public void Delete(T item)
         {
-            var product = Get(id);
-
-            if (product != null) _catalogContext.Set<T>().Remove(product);
+            _catalogContext.Set<T>().Remove(item);
 
             _catalogContext.SaveChanges();
         }
 
-        public async Task DeleteAsync(Guid id)
+        public async Task DeleteAsync(T item)
         {
-            var product = await GetAsync(id);
-
-            if (product != null) _catalogContext.Set<T>().Remove(product);
+            _catalogContext.Set<T>().Remove(item);
 
             await _catalogContext.SaveChangesAsync();
         }
@@ -61,16 +58,22 @@ namespace MarketAPI.Services
             return await _catalogContext.Set<T>().ToListAsync();
         }
         
-        public void Create(T item)
+        public T Create(T item)
         {
             _catalogContext.Set<T>().Add(item);
+
+            _catalogContext.SaveChanges();
+
+            return item;
         }
 
-        public async Task CreateAsync(T item)
+        public async Task<T> CreateAsync(T item)
         {
             await _catalogContext.Set<T>().AddAsync(item);
 
             await _catalogContext.SaveChangesAsync();
+
+            return item;
         }
 
         public void Update(T item)

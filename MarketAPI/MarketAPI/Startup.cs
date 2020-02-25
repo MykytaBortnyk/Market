@@ -97,6 +97,7 @@ namespace MarketAPI
             });
 
             AppIdentityDbContext.CreateBaseAccount(app.ApplicationServices).Wait();
+            CatalogContext.CreateBaseProducts(app.ApplicationServices);
         }
     }
 }

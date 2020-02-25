@@ -16,5 +16,7 @@ namespace MarketAPI.Models.Identity
         public ICollection<Product> CartProducts { get; set; }
 
         public double TotalPrice { get; set; }
+
+        public double TotalItems { get; set; }
     }
 }

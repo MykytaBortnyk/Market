@@ -12,10 +12,10 @@ namespace MarketAPI.Interfaces
         Task<IEnumerable<T>> GetAsync();
         T Get(Guid id);
         Task<T> GetAsync(Guid id);
-        void Create(T item);
-        Task CreateAsync(T item);
+        T Create(T item);
+        Task<T> CreateAsync(T item);
         void Update(T item);
-        void Delete(Guid id);
-        Task DeleteAsync(Guid id);
+        void Delete(T item);
+        Task DeleteAsync(T item);
     }
 }

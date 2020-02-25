@@ -14,5 +14,7 @@ namespace MarketAPI.Models.Identity
         public AppUser AppUser { get; set; }
 
         public ICollection<Product> WishListProducts { get; set; }
+
+        public double TotalItems { get; set; }
     }
 }

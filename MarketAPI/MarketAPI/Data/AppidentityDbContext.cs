@@ -12,6 +12,13 @@ namespace MarketAPI.Data
 {
     public class AppIdentityDbContext : IdentityDbContext<AppUser>
     {
+
+        public DbSet<Cart> Carts { get; set; }
+
+        public DbSet<Order> Orders { get; set; }
+
+        public DbSet<WishList> WishLists { get; set; }
+
         public AppIdentityDbContext(DbContextOptions<AppIdentityDbContext> options) : base(options)
         { }
 
@@ -23,16 +30,20 @@ namespace MarketAPI.Data
         public static async Task CreateBaseAccount(IServiceProvider serviceProvider)
         {
             UserManager<AppUser> _userManager = serviceProvider.GetRequiredService<UserManager<AppUser>>();
-            UserManager<IdentityRole> _roleManager = serviceProvider.GetRequiredService<UserManager<IdentityRole>>();
+            RoleManager<IdentityRole> _roleManager = serviceProvider.GetRequiredService<RoleManager<IdentityRole>>();
             var userName = "Joe";
             var email = "Joe@example.com";
             var role = "Admin";
-            var passvvord = "Pass$.Vvord";
+            var passvvord = "Pas$.Vvord";
             AppUser user = new AppUser {
                 UserName = userName,
-                Email = email
+                Email = email,
+                WishList = new WishList(),
+                Order = new Order(),
+                Cart = new Cart()
             };
             await _roleManager.CreateAsync(new IdentityRole(role));
+            await _roleManager.CreateAsync(new IdentityRole("User"));
             await _userManager.CreateAsync(user, passvvord);
             await _userManager.AddToRoleAsync(user, role);
         }

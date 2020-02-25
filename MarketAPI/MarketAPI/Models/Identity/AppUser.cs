@@ -10,7 +10,7 @@ namespace MarketAPI.Models.Identity
         {
             Name = model.Name;
             Surname = model.Surname;
-            ZipCode = model.ZipCode;
+            PostalCode = model.PostalCode;
             Address = model.Address;
             PhoneNumber = model.PhoneNumber;
             Cart = new Cart();
@@ -28,7 +28,7 @@ namespace MarketAPI.Models.Identity
         public string Surname { get; set; }
 
         [DataType(DataType.PostalCode)]
-        public string ZipCode { get; set; }
+        public string PostalCode { get; set; }
 
         public string Address { get; set; }
 

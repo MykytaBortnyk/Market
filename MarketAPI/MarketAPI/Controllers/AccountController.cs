@@ -9,11 +9,11 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-
+//TODO: Confirm email, reset and forgot password
 namespace MarketAPI.Controllers
 {
     [Route("Account")]
-    public class AccountController : ControllerBase
+    public class AccountController : Controller
     {
         private readonly SignInManager<AppUser> _signInManager;
         private readonly UserManager<AppUser> _userManager;
@@ -25,8 +25,9 @@ namespace MarketAPI.Controllers
             _userManager = userManager;
         }
 
+        //TODO: add auth notification
         [HttpPost, Route("SignIn")]
-        public async Task<IActionResult> SignAsync([FromBody]SignInViewModel model)
+        public async Task<IActionResult> SignInAsync([FromBody]SignInViewModel model)
         {
             if (!User.Identity.IsAuthenticated)
             {
@@ -40,6 +41,7 @@ namespace MarketAPI.Controllers
 
                         if (result.Succeeded)
                         {
+                            await _userManager.AddToRoleAsync(user, "User");
                             return Ok();
                         }
                     }
@@ -70,6 +72,7 @@ namespace MarketAPI.Controllers
             return Ok();
         }
 
+        //TODO: confirmation reg. by email with SendGrid
         [HttpPost, Route("SignUp")]
         public async Task<IActionResult> SignUpAsync([FromBody]SignUpViewModel model)
         {

@@ -1,27 +1,30 @@
 ﻿<Properties StartupConfiguration="{B39668FD-E7BD-46E1-9E71-ECDEA1065120}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="MarketAPI/Services/ProductsRepository.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MarketAPI/Models/ProductComment.cs">
     <Files>
-      <File FileName="MarketAPI/Data/CatalogContext.cs" Line="53" Column="45" />
-      <File FileName="MarketAPI/Models/Furniture/Сupboard.cs" />
-      <File FileName="MarketAPI/Data/AppIdentityDbContext.cs" Line="25" Column="83" />
-      <File FileName="MarketAPI/Startup.cs" Line="99" Column="75" />
-      <File FileName="MarketAPI/Program.cs" Line="25" Column="13" />
-      <File FileName="MarketAPI/Services/ProductsRepository.cs" Line="41" Column="44" />
-      <File FileName="MarketAPI/Models/Product.cs" Line="19" Column="23" NotebookId="1" />
-      <File FileName="MarketAPI/Models/Furniture/Chair.cs" Line="4" Column="27" NotebookId="1" />
+      <File FileName="MarketAPI/Controllers/MainPageController.cs" Line="66" Column="40" />
+      <File FileName="MarketAPI/Services/ProductsRepository.cs" Line="24" Column="13" />
+      <File FileName="MarketAPI/Interfaces/IRepository.cs" Line="17" Column="25" />
+      <File FileName="MarketAPI/Program.cs" Line="16" Column="1" />
+      <File FileName="MarketAPI/Startup.cs" Line="99" Column="1" />
+      <File FileName="MarketAPI/Data/AppIdentityDbContext.cs" Line="45" Column="1" />
+      <File FileName="MarketAPI/Models/Identity/AppUser.cs" Line="22" Column="1" />
+      <File FileName="MarketAPI/Models/Product.cs" Line="33" Column="40" />
+      <File FileName="MarketAPI/Models/ProductComment.cs" Line="7" Column="23" />
+      <File FileName="MarketAPI/Models/Identity/Cart.cs" Line="10" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="MarketAPI" expanded="True">
             <Node name="MarketAPI" expanded="True">
+              <Node name="Controllers" expanded="True" />
               <Node name="Data" expanded="True" />
+              <Node name="Interfaces" expanded="True" />
               <Node name="Models" expanded="True">
-                <Node name="Furniture" expanded="True" />
+                <Node name="Identity" expanded="True" />
+                <Node name="ProductComment.cs" selected="True" />
               </Node>
-              <Node name="Services" expanded="True">
-                <Node name="ProductsRepository.cs" selected="True" />
-              </Node>
+              <Node name="Services" expanded="True" />
             </Node>
           </Node>
         </State>
@@ -33,8 +36,25 @@
   <MonoDevelop.Ide.ItemProperties.MarketAPI PreferredExecutionTarget="/Applications/Microsoft Edge Dev.app" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/Users/usver/Documents/GitHub/Market/Market/MarketAPI/MarketAPI/Services/ProductsRepository.cs" relfile="MarketAPI/Services/ProductsRepository.cs" line="45" column="1" />
+      <Breakpoint file="/Users/usver/Documents/GitHub/Market/Market/MarketAPI/MarketAPI/Services/ProductsRepository.cs" relfile="MarketAPI/Services/ProductsRepository.cs" line="42" column="1" />
       <Breakpoint file="/Users/usver/Documents/GitHub/Market/Market/MarketAPI/MarketAPI/Controllers/ProductsController.cs" relfile="MarketAPI/Controllers/ProductsController.cs" line="94" column="1" />
+      <Breakpoint file="/Users/usver/Documents/GitHub/Market/Market/MarketAPI/MarketAPI/Services/ProductsRepository.cs" relfile="MarketAPI/Services/ProductsRepository.cs" line="62" column="1" />
+      <Breakpoint file="/Users/usver/Documents/GitHub/Market/Market/MarketAPI/MarketAPI/Services/ProductsRepository.cs" relfile="MarketAPI/Services/ProductsRepository.cs" line="71" column="1" />
+      <Breakpoint file="/Users/usver/Documents/GitHub/Market/Market/MarketAPI/MarketAPI/Services/ProductsRepository.cs" relfile="MarketAPI/Services/ProductsRepository.cs" line="52" column="1" />
+      <Breakpoint file="/Users/usver/Documents/GitHub/Market/Market/MarketAPI/MarketAPI/Services/ProductsRepository.cs" relfile="MarketAPI/Services/ProductsRepository.cs" line="57" column="1" />
+      <Breakpoint file="/Users/usver/Documents/GitHub/Market/Market/MarketAPI/MarketAPI/Services/ProductsRepository.cs" relfile="MarketAPI/Services/ProductsRepository.cs" line="80" column="1" />
+      <Breakpoint file="/Users/usver/Documents/GitHub/Market/Market/MarketAPI/MarketAPI/Services/ProductsRepository.cs" relfile="MarketAPI/Services/ProductsRepository.cs" line="47" column="1" />
+      <Breakpoint file="/Users/usver/Documents/GitHub/Market/Market/MarketAPI/MarketAPI/Services/ProductsRepository.cs" relfile="MarketAPI/Services/ProductsRepository.cs" line="37" column="1" />
+      <Breakpoint file="/Users/usver/Documents/GitHub/Market/Market/MarketAPI/MarketAPI/Services/ProductsRepository.cs" relfile="MarketAPI/Services/ProductsRepository.cs" line="30" column="1" />
+      <Breakpoint file="/Users/usver/Documents/GitHub/Market/Market/MarketAPI/MarketAPI/Services/ProductsRepository.cs" relfile="MarketAPI/Services/ProductsRepository.cs" line="23" column="1" />
+      <Breakpoint file="/Users/usver/Documents/GitHub/Market/Market/MarketAPI/MarketAPI/Controllers/MainPageController.cs" relfile="MarketAPI/Controllers/MainPageController.cs" line="43" column="1" />
+      <Breakpoint file="/Users/usver/Documents/GitHub/Market/Market/MarketAPI/MarketAPI/Controllers/MainPageController.cs" relfile="MarketAPI/Controllers/MainPageController.cs" line="53" column="1" />
+      <Breakpoint file="/Users/usver/Documents/GitHub/Market/Market/MarketAPI/MarketAPI/Controllers/MainPageController.cs" relfile="MarketAPI/Controllers/MainPageController.cs" line="67" column="1" />
+      <Breakpoint file="/Users/usver/Documents/GitHub/Market/Market/MarketAPI/MarketAPI/Controllers/MainPageController.cs" relfile="MarketAPI/Controllers/MainPageController.cs" line="28" column="1" />
+      <Breakpoint file="/Users/usver/Documents/GitHub/Market/Market/MarketAPI/MarketAPI/Controllers/MainPageController.cs" relfile="MarketAPI/Controllers/MainPageController.cs" line="19" column="1" />
+      <Breakpoint file="/Users/usver/Documents/GitHub/Market/Market/MarketAPI/MarketAPI/Controllers/MainPageController.cs" relfile="MarketAPI/Controllers/MainPageController.cs" line="25" column="1" />
+      <Breakpoint file="/Users/usver/Documents/GitHub/Market/Market/MarketAPI/MarketAPI/Controllers/MainPageController.cs" relfile="MarketAPI/Controllers/MainPageController.cs" line="24" column="1" />
+      <Breakpoint file="/Users/usver/Documents/GitHub/Market/Market/MarketAPI/MarketAPI/Data/AppIdentityDbContext.cs" relfile="MarketAPI/Data/AppIdentityDbContext.cs" line="45" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />

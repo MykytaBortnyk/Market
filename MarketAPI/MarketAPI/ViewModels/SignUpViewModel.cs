@@ -19,7 +19,7 @@ namespace MarketAPI.ViewModels
         public string PhoneNumber { get; set; }
 
         [DataType(DataType.PostalCode)]
-        public string ZipCode { get; set; }
+        public string PostalCode { get; set; }
 
         public string Address { get; set; }
 

@@ -30,6 +30,6 @@ namespace MarketAPI.Models
 
         public string AdditionalCharacteristics { get; set; }
 
-        public ICollection<string> Comments { get; set; }
+        public ICollection<ProductComment> Comments { get; set; }
     }
 }
