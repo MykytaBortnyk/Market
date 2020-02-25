@@ -14,6 +14,7 @@
     <Folder Include="Extensions\" />
     <Folder Include="Models\Identity\" />
     <Folder Include="ViewModels\" />
+    <Folder Include="Models\Furniture\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.2" />

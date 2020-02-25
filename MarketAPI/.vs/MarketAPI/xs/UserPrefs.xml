@@ -1,13 +1,32 @@
 ﻿<Properties StartupConfiguration="{B39668FD-E7BD-46E1-9E71-ECDEA1065120}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="MarketAPI/Controllers/AccountController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MarketAPI/Services/ProductsRepository.cs">
     <Files>
-      <File FileName="MarketAPI/Extensions/SessionExtensions.cs" Line="1" Column="1" />
-      <File FileName="MarketAPI/Controllers/AccountController.cs" Line="97" Column="1" />
-      <File FileName="MarketAPI/Startup.cs" />
-      <File FileName="MarketAPI/ViewModels/SignUpViewModel.cs" />
-      <File FileName="MarketAPI/Models/Identity/AppUser.cs" />
-      <File FileName="MarketAPI/Data/AppIdentityDbContext.cs" />
+      <File FileName="MarketAPI/Data/CatalogContext.cs" Line="53" Column="45" />
+      <File FileName="MarketAPI/Models/Furniture/Сupboard.cs" />
+      <File FileName="MarketAPI/Data/AppIdentityDbContext.cs" Line="25" Column="83" />
+      <File FileName="MarketAPI/Startup.cs" Line="99" Column="75" />
+      <File FileName="MarketAPI/Program.cs" Line="25" Column="13" />
+      <File FileName="MarketAPI/Services/ProductsRepository.cs" Line="41" Column="44" />
+      <File FileName="MarketAPI/Models/Product.cs" Line="19" Column="23" NotebookId="1" />
+      <File FileName="MarketAPI/Models/Furniture/Chair.cs" Line="4" Column="27" NotebookId="1" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="MarketAPI" expanded="True">
+            <Node name="MarketAPI" expanded="True">
+              <Node name="Data" expanded="True" />
+              <Node name="Models" expanded="True">
+                <Node name="Furniture" expanded="True" />
+              </Node>
+              <Node name="Services" expanded="True">
+                <Node name="ProductsRepository.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

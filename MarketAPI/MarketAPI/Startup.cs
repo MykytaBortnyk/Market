@@ -95,6 +95,8 @@ namespace MarketAPI
             {
                 endpoints.MapControllers();
             });
+
+            AppIdentityDbContext.CreateBaseAccount(app.ApplicationServices).Wait();
         }
     }
 }

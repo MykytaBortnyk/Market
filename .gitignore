@@ -6,3 +6,5 @@ MarketAPI/MarketAPI/obj/*
 MarketAPI/PseudoClient/*
 MarketAPI/PseudoClient/PseudoClient.csproj
 MarketAPI/PseudoClient/Program.cs
+MarketAPI/.vs/MarketAPI/xs/UserPrefs.xml
+MarketAPI/.vs/MarketAPI/xs/sqlite3/storage.ide

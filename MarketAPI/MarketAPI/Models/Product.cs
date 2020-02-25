@@ -1,9 +1,8 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections.Generic;
 
 namespace MarketAPI.Models
 {
-    public class Product : BaseEntity//, IAggregateRoot
+    public class Product : BaseEntity
     {
         public string Title { get; set; }
 
@@ -11,24 +10,26 @@ namespace MarketAPI.Models
 
         public string Category { get; set; }
 
-        public double Price { get; set; }
+        public double Cost { get; set; }
 
-        public int ItemsLeft { get; set; } 
+        public int ItemsLeft { get; set; }
 
         public string ImageUri { get; set; }
 
-        //public ICollection
-    }
-    public class SomeTable : Product
-    {
-        public int SomePropOfTable { get; set; }
-    }
+        public double Width { get; set; }
 
-    public class SomeChair : Product
-    {
-        public string SomePropOfChair { get; set; }
-    }
+        public double Height { get; set; }
 
-    public interface IAggregateRoot
-    { }
+        public double Depth { get; set; }
+
+        public string Color { get; set; }
+
+        public int CommentsCount { get; set; }
+
+        public int Rate { get; set; }
+
+        public string AdditionalCharacteristics { get; set; }
+
+        public ICollection<string> Comments { get; set; }
+    }
 }

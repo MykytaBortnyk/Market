@@ -13,6 +13,8 @@ namespace MarketAPI.Models.Identity
         [ForeignKey("AspNetUsersId")]
         public AppUser AppUser { get; set; }
 
-        public ICollection<Product> Products { get; set; }
+        public ICollection<Product> CartProducts { get; set; }
+
+        public double TotalPrice { get; set; }
     }
 }

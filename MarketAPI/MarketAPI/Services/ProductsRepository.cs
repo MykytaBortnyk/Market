@@ -38,7 +38,7 @@ namespace MarketAPI.Services
 
         public async Task<bool> DoesItemExist(Guid id)
         {
-            return await _catalogContext.Products.AnyAsync(p => p.Id == id);
+            return await _catalogContext.Set<T>().AnyAsync(p => p.Id == id);
         }
 
         public T Get(Guid id)
