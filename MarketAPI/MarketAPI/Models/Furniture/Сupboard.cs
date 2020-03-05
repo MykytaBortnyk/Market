@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System.IO;
 namespace MarketAPI.Models.Furniture
 {
     public class Сupboard : Product

@@ -1,22 +1,30 @@
 ﻿using System;
 using System.Collections.Generic;
+using MarketAPI.Models;
 using MarketAPI.Models.Furniture;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace MarketAPI.Data
 {
-    public class CatalogContext : DbContext
+    /*public class CatalogContext : DbContext
     {
-        public DbSet<OfficeTable> OfficeTables { get; set; }
-
         public DbSet<Chair> Chairs { get; set; }
 
         public DbSet<Сupboard> Сupboards { get; set; }
 
+        public DbSet<OfficeTable> OfficeTables { get; set; }
+
+        public DbSet<ProductComment> ProductComments { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<Chair>().HasBaseType<Product>();
+
+            modelBuilder.Entity<Сupboard>().HasBaseType<Product>();
+
+            modelBuilder.Entity<OfficeTable>().HasBaseType<Product>();
+
             base.OnModelCreating(modelBuilder);
         }
 
@@ -41,7 +49,7 @@ namespace MarketAPI.Data
                 Depth = 480,
                 Color = "Sky Blue",
                 CommentsCount = 0,
-                Comments = new List<string>(),
+                Comments = new List<ProductComment>(),
                 Rate = 0,
                 AdditionalCharacteristics = string.Empty,
                 MaxWeight = 400,
@@ -54,5 +62,5 @@ namespace MarketAPI.Data
             });
             _context.SaveChanges();
         }
-    }
+    }*/
 }

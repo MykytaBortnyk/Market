@@ -36,14 +36,7 @@ namespace MarketAPI
             services.AddDistributedMemoryCache();
 
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-            /*services.Configure<CookiePolicyOptions>(options =>
-            {
-                // This lambda determines whether user consent for non-essential 
-                // cookies is needed for a given request.
-                options.CheckConsentNeeded = context => true;
-                // requires using Microsoft.AspNetCore.Http;
-                options.MinimumSameSitePolicy = SameSiteMode.None;
-            });*/
+
             services.AddIdentity<AppUser, IdentityRole>(opts =>
             {
                 opts.SignIn.RequireConfirmedEmail = false;
@@ -54,22 +47,29 @@ namespace MarketAPI
                 opts.Password.RequireLowercase = false;
                 opts.Password.RequireUppercase = false;
                 opts.Password.RequireDigit = false;
-            }).AddEntityFrameworkStores<AppIdentityDbContext>().AddDefaultTokenProviders();
+            }).AddEntityFrameworkStores<AppDbContext>().AddDefaultTokenProviders();
+
+            services.ConfigureApplicationCookie(options =>
+            {
+                options.LoginPath = "/Account/Login";
+                options.ExpireTimeSpan = TimeSpan.FromDays(5);
+                options.SlidingExpiration = true;
+            });
+            var connection = "Data Source=MarketAPI.db3";
+            //services.AddDbContext<CatalogContext>(options => options.UseSqlite(connection));
+            services.AddDbContext<AppDbContext>(options => options.UseSqlite(connection));
+
+            services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+            services.AddScoped<ICollectionRepository, CollectionProductsRepository>();
 
             services.AddSession(options =>
             {
-                // Set a short timeout for easy testing.
+                options.Cookie.Name = ".MarketAPI.Session";
                 options.IdleTimeout = TimeSpan.FromSeconds(10);
-                options.Cookie.HttpOnly = true;
-                // Make the session cookie essential
                 options.Cookie.IsEssential = true;
             });
-
             services.AddControllers();
             services.AddMvc();
-            services.AddDbContext<CatalogContext>(options => options.UseInMemoryDatabase("RamEater"));
-            services.AddDbContext<AppIdentityDbContext>(options => options.UseInMemoryDatabase("RamEater"));
-            //services.AddScoped<ProductsRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -90,14 +90,15 @@ namespace MarketAPI
             app.UseAuthorization();
 
             app.UseSession();
+            app.UseCookiePolicy();
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
             });
 
-            AppIdentityDbContext.CreateBaseAccount(app.ApplicationServices).Wait();
-            CatalogContext.CreateBaseProducts(app.ApplicationServices);
+            //AppDbContext.CreateBaseAccount(app.ApplicationServices).Wait();
+            //AppDbContext.CreateBaseProducts(app.ApplicationServices);
         }
     }
 }

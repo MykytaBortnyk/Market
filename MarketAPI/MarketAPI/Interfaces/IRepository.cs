@@ -14,7 +14,7 @@ namespace MarketAPI.Interfaces
         Task<T> GetAsync(Guid id);
         T Create(T item);
         Task<T> CreateAsync(T item);
-        void Update(T item);
+        Task UpdateAsync(T item);
         void Delete(T item);
         Task DeleteAsync(T item);
     }

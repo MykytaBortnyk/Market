@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using MarketAPI.ViewModels;
 using Microsoft.AspNetCore.Identity;
@@ -14,8 +15,6 @@ namespace MarketAPI.Models.Identity
             Address = model.Address;
             PhoneNumber = model.PhoneNumber;
             Cart = new Cart();
-            Order = new Order();
-            WishList = new WishList();
         }
 
         public AppUser() : base()
@@ -33,9 +32,5 @@ namespace MarketAPI.Models.Identity
         public string Address { get; set; }
 
         public Cart Cart { get; set; }
-
-        public Order Order { get; set; }
-
-        public WishList WishList { get; set; }
     }
 }

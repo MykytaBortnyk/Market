@@ -7,24 +7,55 @@
         <e p="appsettings.json" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="Controllers" t="Include">
-          <e p="ProductsController.cs" t="Include" />
+          <e p="AccountController.cs" t="Include" />
+          <e p="CartController.cs" t="Include" />
+          <e p="ChairsController.cs" t="Include" />
+          <e p="MainPageController.cs" t="Include" />
+          <e p="OfficeTablesController.cs" t="Include" />
+          <e p="СupboardsController.cs" t="Include" />
         </e>
         <e p="Data" t="Include">
+          <e p="AppIdentityDbContext.cs" t="Include" />
           <e p="CatalogContext.cs" t="Include" />
         </e>
+        <e p="extensions" t="Include">
+          <e p="SessionExtensions.cs" t="Include" />
+        </e>
         <e p="Interfaces" t="Include">
-          <e p="ICartRepository.cs" t="Include" />
-          <e p="IProductsRepository.cs" t="Include" />
+          <e p="IChairRepository.cs" t="Include" />
+          <e p="ICollectionRepository.cs" t="Include" />
+          <e p="IOfficeTableRepository.cs" t="Include" />
           <e p="IRepository.cs" t="Include" />
+          <e p="IСupboardRepository.cs" t="Include" />
         </e>
         <e p="MarketAPI.csproj" t="IncludeRecursive" />
-        <e p="Models" t="Include">
-          <e p="AppUser.cs" t="Include" />
-          <e p="BaseEntity.cs" t="Include" />
-          <e p="Cart.cs" t="Include" />
-          <e p="Catalog.cs" t="Include" />
-          <e p="Product.cs" t="Include" />
+        <e p="MarketAPI.db3" t="Include" />
+        <e p="MarketAPI.db3-shm" t="Include" />
+        <e p="MarketAPI.db3-wal" t="Include" />
+        <e p="Migrations" t="Include">
+          <e p="20200301165539_Initial.cs" t="Include" />
+          <e p="20200301165539_Initial.Designer.cs" t="Include" />
+          <e p="AppDbContextModelSnapshot.cs" t="Include" />
         </e>
+        <e p="Models" t="Include">
+          <e p="BaseColelctionEntity.cs" t="Include" />
+          <e p="BaseEntity.cs" t="Include" />
+          <e p="Catalog.cs" t="Include" />
+          <e p="Furniture" t="Include">
+            <e p="Chair.cs" t="Include" />
+            <e p="OfficeTable.cs" t="Include" />
+            <e p="Сupboard.cs" t="Include" />
+          </e>
+          <e p="Identity" t="Include">
+            <e p="AppUser.cs" t="Include" />
+            <e p="Cart.cs" t="Include" />
+            <e p="CartProducts.cs" t="Include" />
+          </e>
+          <e p="ManyToMany" t="Include" />
+          <e p="Product.cs" t="Include" />
+          <e p="ProductComment.cs" t="Include" />
+        </e>
+        <e p="mono_crash.1479af29e0.0.json" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp3.1" t="Include">
@@ -37,17 +68,35 @@
           <e p="launchSettings.json" t="Include" />
         </e>
         <e p="Services" t="Include">
-          <e p="CartRepository.cs" t="Include" />
-          <e p="ProductsRepository.cs" t="Include" />
+          <e p="CollectionProductsRepository.cs" t="Include" />
+          <e p="Repository.cs" t="Include" />
         </e>
         <e p="Startup.cs" t="Include" />
+        <e p="ViewModels" t="Include">
+          <e p="CartViewModel.cs" t="Include" />
+          <e p="SignInViewModel.cs" t="Include" />
+          <e p="SignUpViewModel.cs" t="Include" />
+        </e>
       </e>
       <e p="MarketAPI.sln" t="IncludeFlat" />
       <e p="packages" t="ExcludeRecursive" />
+      <e p="PseudoClient" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="PseudoClient.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+        <e p="PseudoClient.csproj" t="IncludeRecursive" />
+      </e>
     </e>
     <e p="$USER_HOME$/Library/Caches/Rider2019.2/extResources" t="IncludeRecursive" />
     <e p="$USER_HOME$/Library/Caches/Rider2019.2/resharper-host/local/Transient/ReSharperHost/v192/SolutionCaches/_MarketAPI.-737100020.00" t="ExcludeRecursive" />
     <e p="$APPLICATION_CONFIG_DIR$/consoles/db" t="IncludeRecursive" />
     <e p="$APPLICATION_CONFIG_DIR$/extensions" t="IncludeRecursive" />
+    <e p="$APPLICATION_CONFIG_DIR$/scratches" t="IncludeRecursive" />
   </component>
 </project>

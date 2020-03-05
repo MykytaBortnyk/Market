@@ -6,15 +6,14 @@ using MarketAPI.Data;
 using MarketAPI.Interfaces;
 using MarketAPI.Models;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.ChangeTracking;
 
 namespace MarketAPI.Services
 {
-    public class ProductsRepository<T> : IRepository<T> where T : Product
+    public class Repository<T> : IRepository<T> where T : BaseEntity
     {
-        private readonly CatalogContext _catalogContext;
+        private readonly AppDbContext _catalogContext;
 
-        public ProductsRepository(CatalogContext catalogContext)
+        public Repository(AppDbContext catalogContext)
         {
             _catalogContext = catalogContext;
         }
@@ -45,19 +44,19 @@ namespace MarketAPI.Services
 
         public async Task<T> GetAsync(Guid id)
         {
-            return await _catalogContext.Set<T>().FirstOrDefaultAsync(p => p.Id == id);
+            return await _catalogContext.Set<T>().FindAsync(id);
         }
 
         public IEnumerable<T> Get()
         {
             return _catalogContext.Set<T>().ToList();
         }
-        
+
         public async Task<IEnumerable<T>> GetAsync()
         {
             return await _catalogContext.Set<T>().ToListAsync();
         }
-        
+
         public T Create(T item)
         {
             _catalogContext.Set<T>().Add(item);
@@ -76,11 +75,11 @@ namespace MarketAPI.Services
             return item;
         }
 
-        public void Update(T item)
+        public async Task UpdateAsync(T item)
         {
-            _catalogContext.Entry(item).State = EntityState.Modified;
+            _catalogContext.Update(item); //Or just update it
 
-            _catalogContext.SaveChanges();
+            await _catalogContext.SaveChangesAsync();
         }
     }
 }
