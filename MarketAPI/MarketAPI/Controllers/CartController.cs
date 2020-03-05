@@ -109,13 +109,38 @@ namespace MarketAPI.Controllers
             {
                 var product = await _repository.GetAsync(itemId);
 
+                if (User.Identity.IsAuthenticated)
+                {
+                    var cartId = (await _context.Carts.FirstOrDefaultAsync(c => c.AppUserId == _userManager.GetUserId(User))).Id;
+
+                    if (product != null && cartId != null)
+                    {
+                        await _productsRepository.DeleteItemAsync(cartId, product);
+                        return NoContent();
+                    }
+                    return NotFound();
+                }
+                HttpContext.Session.Remove("productsList");
+                return NoContent();
+            }
+            return NotFound();
+        }
+
+        [HttpDelete]
+        public async Task<IActionResult> Delete()
+        {
+            if (User.Identity.IsAuthenticated)
+            {
                 var cartId = (await _context.Carts.FirstOrDefaultAsync(c => c.AppUserId == _userManager.GetUserId(User))).Id;
 
-                if (product != null && cartId != null)
+                if (cartId != null)
                 {
-                    await _productsRepository.DeleteAsync(cartId, product);
+                    await _productsRepository.DeleteAsync(cartId);
+                    return NoContent();
                 }
+                return NotFound();
             }
+            HttpContext.Session.Remove("productsList");
             return NoContent();
         }
     }

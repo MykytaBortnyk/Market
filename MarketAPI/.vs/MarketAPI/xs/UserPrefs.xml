@@ -1,14 +1,31 @@
 ﻿<Properties StartupConfiguration="{B39668FD-E7BD-46E1-9E71-ECDEA1065120}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="MarketAPI/Models/Identity/CartProducts.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MarketAPI/Controllers/CartController.cs">
     <Files>
-      <File FileName="MarketAPI/Controllers/CartController.cs" Line="31" Column="47" />
-      <File FileName="MarketAPI/Data/AppIdentityDbContext.cs" />
-      <File FileName="MarketAPI/Services/CollectionProductsRepository.cs" Line="54" Column="34" />
-      <File FileName="MarketAPI/Startup.cs" Line="63" Column="92" />
-      <File FileName="MarketAPI/Models/Identity/CartProducts.cs" Line="6" Column="49" />
-      <File FileName="MarketAPI/Models/Identity/OrderProducts.cs" Line="1" Column="1" />
-      <File FileName="MarketAPI/Models/BaseColelctionEntity.cs" Line="8" Column="37" />
+      <File FileName="MarketAPI/Controllers/CartController.cs" Line="138" Column="53" />
+      <File FileName="MarketAPI/Data/AppIdentityDbContext.cs" Line="36" Column="1" />
+      <File FileName="MarketAPI/Services/CollectionProductsRepository.cs" Line="68" Column="1" />
+      <File FileName="MarketAPI/Startup.cs" />
+      <File FileName="MarketAPI/Models/Identity/CartProducts.cs" />
+      <File FileName="MarketAPI/Models/Identity/OrderProducts.cs" />
+      <File FileName="MarketAPI/Models/BaseColelctionEntity.cs" />
+      <File FileName="MarketAPI/Interfaces/ICollectionRepository.cs" Line="14" Column="29" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="MarketAPI" expanded="True">
+            <Node name="MarketAPI" expanded="True">
+              <Node name="Controllers" expanded="True">
+                <Node name="CartController.cs" selected="True" />
+              </Node>
+              <Node name="Data" expanded="True" />
+              <Node name="Interfaces" expanded="True" />
+              <Node name="Services" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

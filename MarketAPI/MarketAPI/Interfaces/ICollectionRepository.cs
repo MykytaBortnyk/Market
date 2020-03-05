@@ -10,6 +10,7 @@ namespace MarketAPI.Interfaces
     {
         public Task<List<T>> GetCartProductsAsync(Guid collectionId);
         public Task AddAsync(Guid collectionId, Product product);
-        public Task DeleteAsync(Guid collectionId, Product product);
+        public Task DeleteItemAsync(Guid collectionId, Product product);
+        public Task DeleteAsync(Guid collectionId);
     }
 }

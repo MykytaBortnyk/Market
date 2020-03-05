@@ -43,7 +43,7 @@ namespace MarketAPI.Services
             await _context.SaveChangesAsync();
         }
 
-        public async Task DeleteAsync(Guid collectionId, Product product)
+        public async Task DeleteItemAsync(Guid collectionId, Product product)
         {
             var cart = await GetCartProductsAsync(collectionId);
 
@@ -52,6 +52,18 @@ namespace MarketAPI.Services
             if (cartProduct != null)
             {
                 _context.Set<T>().Remove(cartProduct);
+            }
+
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task DeleteAsync(Guid collectionId)
+        {
+            var collection = await _context.Set<T>().FirstOrDefaultAsync(p => p.Id == collectionId);
+
+            if (collection != null)
+            {
+                _context.Set<T>().Remove(collection);
             }
 
             await _context.SaveChangesAsync();
