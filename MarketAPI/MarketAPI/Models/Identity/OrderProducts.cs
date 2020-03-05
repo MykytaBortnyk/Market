@@ -1,10 +1,13 @@
-﻿using System;
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
 namespace MarketAPI.Models.Identity
 {
-    public class OrderProducts
+    public class OrderProducts : BaseCollectionEntity
     {
-        public OrderProducts()
-        {
-        }
+        [ForeignKey("Id")]
+        public Cart Cart { get; set; }
+
+        [ForeignKey("ProductId")]
+        public Product Product { get; set; }
     }
 }

@@ -1,30 +1,22 @@
 ﻿<Properties StartupConfiguration="{B39668FD-E7BD-46E1-9E71-ECDEA1065120}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="MarketAPI/Controllers/CartController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MarketAPI/Models/Identity/CartProducts.cs">
     <Files>
-      <File FileName="MarketAPI/Controllers/CartController.cs" Line="44" Column="24" />
+      <File FileName="MarketAPI/Controllers/CartController.cs" Line="31" Column="47" />
       <File FileName="MarketAPI/Data/AppIdentityDbContext.cs" />
-      <File FileName="MarketAPI/Services/CollectionProductsRepository.cs" />
-      <File FileName="MarketAPI/Startup.cs" />
-      <File FileName="MarketAPI/Interfaces/ICollectionRepository.cs" />
-      <File FileName="MarketAPI/Controllers/MainPageController.cs" />
-      <File FileName="MarketAPI/Services/Repository.cs" />
-      <File FileName="MarketAPI/Controllers/OfficeTablesController.cs" />
-      <File FileName="MarketAPI/Models/Furniture/OfficeTable.cs" />
-      <File FileName="MarketAPI/Interfaces/IRepository.cs" />
-      <File FileName="MarketAPI/Extensions/SessionExtensions.cs" />
-      <File FileName="MarketAPI/Program.cs" />
-      <File FileName="MarketAPI/Controllers/OrderController.cs" />
-      <File FileName="MarketAPI/Models/Identity/Order.cs" />
-      <File FileName="MarketAPI/Models/Identity/Cart.cs" />
-      <File FileName="MarketAPI/Models/Identity/CartProducts.cs" />
-      <File FileName="MarketAPI/Models/Identity/OrderProducts.cs" />
+      <File FileName="MarketAPI/Services/CollectionProductsRepository.cs" Line="54" Column="34" />
+      <File FileName="MarketAPI/Startup.cs" Line="63" Column="92" />
+      <File FileName="MarketAPI/Models/Identity/CartProducts.cs" Line="6" Column="49" />
+      <File FileName="MarketAPI/Models/Identity/OrderProducts.cs" Line="1" Column="1" />
+      <File FileName="MarketAPI/Models/BaseColelctionEntity.cs" Line="8" Column="37" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.ItemProperties.MarketAPI PreferredExecutionTarget="/Applications/Microsoft Edge Dev.app" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/usver/Documents/GitHub/Market/Market/MarketAPI/MarketAPI/Controllers/MainPageController.cs" relfile="MarketAPI/Controllers/MainPageController.cs" line="40" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.ItemProperties.PseudoClient PreferredExecutionTarget="MonoDevelop.Default" />
   <MultiItemStartupConfigurations />

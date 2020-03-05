@@ -10,9 +10,5 @@ namespace MarketAPI.Models.Identity
 
         [ForeignKey("ProductId")]
         public Product Product { get; set; }
-
-        public Guid ProductId { get; set; }
-
-        public int Count { get; set; }
     }
 }

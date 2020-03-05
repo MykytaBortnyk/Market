@@ -6,9 +6,9 @@ using MarketAPI.Models.Identity;
 
 namespace MarketAPI.Interfaces
 {
-    public interface ICollectionRepository
+    public interface ICollectionRepository<T> where T : BaseCollectionEntity, new()
     {
-        public Task<List<CartProducts>> GetCartProductsAsync(Guid collectionId);
+        public Task<List<T>> GetCartProductsAsync(Guid collectionId);
         public Task AddAsync(Guid collectionId, Product product);
         public Task DeleteAsync(Guid collectionId, Product product);
     }

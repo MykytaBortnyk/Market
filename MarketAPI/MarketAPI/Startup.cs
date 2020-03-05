@@ -60,7 +60,7 @@ namespace MarketAPI
             services.AddDbContext<AppDbContext>(options => options.UseSqlite(connection));
 
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
-            services.AddScoped<ICollectionRepository, CollectionProductsRepository>();
+            services.AddScoped(typeof(ICollectionRepository<>), typeof(CollectionRepository<>));
 
             services.AddSession(options =>
             {

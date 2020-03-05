@@ -19,14 +19,17 @@ namespace MarketAPI.Controllers
     public class MainPageController : Controller
     {
         private readonly IRepository<Product> _repository;
-        private readonly ICollectionRepository _productsRepository;
+        //private readonly ICollectionRepository<> _productsRepository;
         private readonly AppDbContext _context;
         private readonly UserManager<AppUser> _userManager;
 
-        public MainPageController(IRepository<Product> repository, ICollectionRepository productsRepository, AppDbContext context, UserManager<AppUser> userManager)
+        public MainPageController(IRepository<Product> repository,
+            //ICollectionRepository productsRepository,
+            AppDbContext context,
+            UserManager<AppUser> userManager)
         {
             _repository = repository;
-            _productsRepository = productsRepository;
+            //_productsRepository = productsRepository;
             _context = context;
             _userManager = userManager;
         }
