@@ -2,7 +2,7 @@
 
 namespace MarketAPI.Interfaces
 {
-    public interface IСupboardRepository : IRepository<Сupboard>
+    public interface IСupboardRepository : IChairRepository<Сupboard>
     {
     }
 }

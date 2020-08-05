@@ -14,9 +14,9 @@ namespace MarketAPI.Controllers
     [Route("api/[controller]")]
     public class ChairsController : Controller
     {
-        private readonly IRepository<Chair> _repository;
+        private readonly IChairRepository<Chair> _repository;
 
-        public ChairsController(IRepository<Chair> repository)
+        public ChairsController(IChairRepository<Chair> repository)
         {
             _repository = repository;
         }

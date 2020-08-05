@@ -59,7 +59,7 @@ namespace MarketAPI
             //services.AddDbContext<CatalogContext>(options => options.UseSqlite(connection));
             services.AddDbContext<AppDbContext>(options => options.UseSqlite(connection));
 
-            services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+            services.AddScoped(typeof(IChairRepository<>), typeof(Repository<>));
             services.AddScoped<ICollectionRepository, CollectionProductsRepository>();
 
             services.AddSession(options =>

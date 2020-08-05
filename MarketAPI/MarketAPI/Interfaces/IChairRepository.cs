@@ -2,7 +2,7 @@
 
 namespace MarketAPI.Interfaces
 {
-    public interface IChairRepository : IRepository<Chair>
+    public interface IChairRepository : IChairRepository<Chair>
     {
     }
 }

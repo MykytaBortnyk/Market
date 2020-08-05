@@ -5,7 +5,7 @@ using MarketAPI.Models;
 
 namespace MarketAPI.Interfaces
 {
-    public interface IRepository<T> where T : BaseEntity//, IAggregateRoot
+    public interface IChairRepository<T> where T : BaseEntity//, IAggregateRoot
     {
         Task<bool> DoesItemExist(Guid id);
         IEnumerable<T> Get();

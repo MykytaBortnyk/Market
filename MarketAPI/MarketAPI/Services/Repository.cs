@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace MarketAPI.Services
 {
-    public class Repository<T> : IRepository<T> where T : BaseEntity
+    public class Repository<T> : IChairRepository<T> where T : BaseEntity, new()
     {
         private readonly AppDbContext _catalogContext;
 
@@ -54,6 +54,8 @@ namespace MarketAPI.Services
 
         public async Task<IEnumerable<T>> GetAsync()
         {
+            var s = typeof(T);
+
             return await _catalogContext.Set<T>().ToListAsync();
         }
 
