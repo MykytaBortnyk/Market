@@ -41,7 +41,7 @@ namespace MarketAPI
             {
                 opts.SignIn.RequireConfirmedEmail = false;
                 opts.SignIn.RequireConfirmedAccount = false;
-                opts.User.RequireUniqueEmail = false;
+                opts.User.RequireUniqueEmail = true;
                 opts.Password.RequiredLength = 6;
                 opts.Password.RequireNonAlphanumeric = false;
                 opts.Password.RequireLowercase = false;
@@ -65,10 +65,16 @@ namespace MarketAPI
             services.AddSession(options =>
             {
                 options.Cookie.Name = ".MarketAPI.Session";
-                options.IdleTimeout = TimeSpan.FromSeconds(10);
+                options.IdleTimeout = TimeSpan.FromDays(5);
                 options.Cookie.IsEssential = true;
+                options.Cookie.HttpOnly = false;
+                options.Cookie.SecurePolicy = CookieSecurePolicy.Always;
             });
-            services.AddControllers();
+
+            services.AddControllers()
+                    .AddNewtonsoftJson(options =>
+                    options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
+
             services.AddMvc();
         }
 
@@ -86,7 +92,7 @@ namespace MarketAPI
             app.UseRouting();
 
             app.UseAuthentication();
-            
+
             app.UseAuthorization();
 
             app.UseSession();

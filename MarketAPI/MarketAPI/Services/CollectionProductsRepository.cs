@@ -24,7 +24,7 @@ namespace MarketAPI.Services
             return await _context.CartProducts.Where(p => p.Id == collectionId).ToListAsync();
         }
 
-        public async Task AddAsync(Guid collectionId, Product product)
+        public async Task AddAsync(Guid collectionId, Product product, int? count)
         {
             var cart = await GetCartProductsAsync(collectionId);
 
@@ -32,12 +32,12 @@ namespace MarketAPI.Services
 
             if(cartProduct != null)
             {
-                cartProduct.Count++;
+                cartProduct.Count++; //TODO: аутизм, надо переделать на + count
                 _context.Update(cartProduct);
             }
             else
             {
-                _context.CartProducts.Add(new CartProducts { Id = collectionId, Product = product, Count = 1 });
+                _context.CartProducts.Add(new CartProducts { Id = collectionId, Product = product, Count = count??= 0 });
             }
 
             await _context.SaveChangesAsync();

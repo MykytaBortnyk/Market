@@ -3,10 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarketAPI", "MarketAPI\MarketAPI.csproj", "{B39668FD-E7BD-46E1-9E71-ECDEA1065120}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PseudoClient", "PseudoClient\PseudoClient.csproj", "{3246E4B2-2467-4CB6-BD07-25EB30B18667}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarketClient", "MarketClient\MarketClient.csproj", "{C08DC45D-F33F-401A-A006-0535559F7189}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,13 +13,5 @@ Global
 		{B39668FD-E7BD-46E1-9E71-ECDEA1065120}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B39668FD-E7BD-46E1-9E71-ECDEA1065120}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B39668FD-E7BD-46E1-9E71-ECDEA1065120}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3246E4B2-2467-4CB6-BD07-25EB30B18667}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3246E4B2-2467-4CB6-BD07-25EB30B18667}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3246E4B2-2467-4CB6-BD07-25EB30B18667}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3246E4B2-2467-4CB6-BD07-25EB30B18667}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C08DC45D-F33F-401A-A006-0535559F7189}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C08DC45D-F33F-401A-A006-0535559F7189}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C08DC45D-F33F-401A-A006-0535559F7189}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C08DC45D-F33F-401A-A006-0535559F7189}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

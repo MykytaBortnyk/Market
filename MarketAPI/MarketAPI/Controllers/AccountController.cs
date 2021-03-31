@@ -1,8 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using MarketAPI.Models;
+using MarketAPI.Data;
+using MarketAPI.Extensions;
+using MarketAPI.Interfaces;
 using MarketAPI.Models.Identity;
 using MarketAPI.ViewModels;
 using Microsoft.AspNetCore.Identity;
@@ -17,12 +17,18 @@ namespace MarketAPI.Controllers
     {
         private readonly SignInManager<AppUser> _signInManager;
         private readonly UserManager<AppUser> _userManager;
+        private readonly AppDbContext _context;
+        private readonly ICollectionRepository _productsRepository;
 
-
-        public AccountController(SignInManager<AppUser> signInManager, UserManager<AppUser> userManager)
+        public AccountController(SignInManager<AppUser> signInManager,
+            UserManager<AppUser> userManager,
+            AppDbContext context,
+            ICollectionRepository productsRepository)
         {
             _signInManager = signInManager;
             _userManager = userManager;
+            _context = context;
+            _productsRepository = productsRepository;
         }
 
         //TODO: add auth notification
@@ -57,7 +63,6 @@ namespace MarketAPI.Controllers
                     }
                     */
                 }
-
             }
 
             ModelState.AddModelError("Login", "Invalid login attempt.");
@@ -68,6 +73,7 @@ namespace MarketAPI.Controllers
         [HttpGet, Route("SignOut")]
         public async Task<IActionResult> SignOut()
         {
+            HttpContext.Session.Remove("productsList");
             await _signInManager.SignOutAsync();
             return Ok();
         }
@@ -76,14 +82,23 @@ namespace MarketAPI.Controllers
         [HttpPost, Route("SignUp")]
         public async Task<IActionResult> SignUpAsync([FromBody]SignUpViewModel model)
         {
-            if(ModelState.IsValid && model != null)
+            if(ModelState.IsValid && model != null && model.Password == model.ConfirmPassword)
             {
                 var user = new AppUser(model);
+                user.UserName = user.Surname + user.Name;
 
                 var result = await _userManager.CreateAsync(user, model.Password);
 
                 if(result.Succeeded)
                 {
+                    var cartProducts = HttpContext.Session.Get<List<CartProducts>>("productsList");
+
+                    user.Cart.Products = cartProducts;
+                    await _userManager.UpdateAsync(user);
+                    HttpContext.Session.Remove("productsList");
+
+                    await _signInManager.PasswordSignInAsync(user, model.Password, false, false);
+
                     return Ok();
                 }
             }

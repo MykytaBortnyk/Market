@@ -6,6 +6,12 @@ namespace MarketAPI.Models.Identity
 {
     public class Cart : BaseEntity
     {
+        public Cart() {}
+        public Cart(List<CartProducts> products)
+        {
+            Products = products;
+        }
+
         public string AppUserId { get; set; }
 
         [ForeignKey("AppUserId")]

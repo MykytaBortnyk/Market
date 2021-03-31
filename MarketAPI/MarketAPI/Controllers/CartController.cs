@@ -43,11 +43,17 @@ namespace MarketAPI.Controllers
         {
             if (User.Identity.IsAuthenticated)
             {
-                var cartId = (await _context.Carts.FirstOrDefaultAsync(c => c.AppUserId == _userManager.GetUserId(User))).Id;
+                var userCart = await Task.Factory.StartNew(() =>
+                        _context.Carts
+                        .Where(c => c.AppUserId == _userManager.GetUserId(User))
+                        .Include(p => p.Products)
+                        .ThenInclude(p => p.Product)
+                        .Single()
+                        );
 
-                if (cartId != null)
+                if(userCart != null)
                 {
-                    return Ok(_context.CartProducts.Where(c => c.Id == cartId));
+                   return Ok(userCart.Products);
                 }
 
                 return NotFound();
@@ -59,8 +65,8 @@ namespace MarketAPI.Controllers
         }
 
         // PUT api/values/5
-        [HttpPut("{itemId}")]
-        public async Task<IActionResult> Put(Guid itemId)
+        [HttpPut("{itemId}/{count?}")]
+        public async Task<IActionResult> Put(Guid itemId, int? count)
         {
             var product = await _repository.GetAsync(itemId);
 
@@ -72,32 +78,32 @@ namespace MarketAPI.Controllers
 
                     if (product != null && cartId != null)
                     {
-                        await _productsRepository.AddAsync(cartId, product);
+                        await _productsRepository.AddAsync(cartId, product, count??= 1);
                         return Ok();
                     }
                 }
+                // карт всегда пустой, надо чекнуть дессириализатор
+                var cartProducts = HttpContext.Session.Get<List<CartProducts>>("productsList");
 
-                var cart = HttpContext.Session.Get<List<CartProducts>>("productsList");
-
-                if (cart == null)
+                if (cartProducts == null)
                 {
-                    cart = new List<CartProducts>();
+                    cartProducts = new List<CartProducts>();
                 }
 
-                var cartProduct = cart.FirstOrDefault(i => i.Product.Id == product.Id);
+                var cartProduct = cartProducts.FirstOrDefault(i => i.Product.Id == product.Id);
 
                 if (cartProduct == null)
                 {
-                    cart.Add(new CartProducts { Cart = new Cart(), Product = product, Count = 1 });
+                    cartProducts.Add(new CartProducts { Cart = new Cart(), Product = product, Count = count??= 1});
                 }
                 else
                 {
-                    cartProduct.Count++;
+                    cartProduct.Count += count ?? 1;
                 }
 
                 HttpContext.Session.Remove("productsList");
-                HttpContext.Session.Set("productsList", cart);
-                return Ok(cart);
+                HttpContext.Session.Set("productsList", cartProducts);
+                return Ok(cartProducts);
             }
             return BadRequest();
         }

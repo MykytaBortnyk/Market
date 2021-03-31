@@ -11,6 +11,8 @@ namespace MarketAPI.Models.Identity
         {
             Name = model.Name;
             Surname = model.Surname;
+            UserName = model.Surname + model.Name;
+            Email = model.Email;
             PostalCode = model.PostalCode;
             Address = model.Address;
             PhoneNumber = model.PhoneNumber;
