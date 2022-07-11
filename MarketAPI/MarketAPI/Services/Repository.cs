@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace MarketAPI.Services
 {
-    public class Repository<T> : IChairRepository<T> where T : BaseEntity, new()
+    public class Repository<T> : IRepository<T> where T : BaseEntity, new()
     {
         private readonly AppDbContext _catalogContext;
 

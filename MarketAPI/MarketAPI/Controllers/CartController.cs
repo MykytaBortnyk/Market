@@ -23,13 +23,13 @@ namespace MarketAPI.Controllers
     {
         private readonly AppDbContext _context;
         private readonly UserManager<AppUser> _userManager;
-        private readonly IChairRepository<Product> _repository;
+        private readonly IRepository<Product> _repository;
         private readonly ICollectionRepository _productsRepository;
 
         public CartController(AppDbContext context,
             UserManager<AppUser> userManager,
             ICollectionRepository productsRepository,
-            IChairRepository<Product> repository)
+            IRepository<Product> repository)
         {
             _context = context;
             _userManager = userManager;

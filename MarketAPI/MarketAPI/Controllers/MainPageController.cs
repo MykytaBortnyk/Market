@@ -18,12 +18,12 @@ namespace MarketAPI.Controllers
     [Route("api/[controller]")]
     public class MainPageController : Controller
     {
-        private readonly IChairRepository<Product> _repository;
+        private readonly IRepository<Product> _repository;
         private readonly ICollectionRepository _productsRepository;
         private readonly AppDbContext _context;
         private readonly UserManager<AppUser> _userManager;
 
-        public MainPageController(IChairRepository<Product> repository, ICollectionRepository productsRepository, AppDbContext context, UserManager<AppUser> userManager)
+        public MainPageController(IRepository<Product> repository, ICollectionRepository productsRepository, AppDbContext context, UserManager<AppUser> userManager)
         {
             _repository = repository;
             _productsRepository = productsRepository;

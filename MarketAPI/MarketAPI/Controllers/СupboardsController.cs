@@ -13,9 +13,9 @@ namespace MarketAPI.Controllers
     [Route("api/[controller]")]
     public class СupboardsController : Controller
     {
-        private readonly IChairRepository<Сupboard> _repository;
+        private readonly IRepository<Сupboard> _repository;
 
-        public СupboardsController(IChairRepository<Сupboard> repository)
+        public СupboardsController(IRepository<Сupboard> repository)
         {
             _repository = repository;
         }

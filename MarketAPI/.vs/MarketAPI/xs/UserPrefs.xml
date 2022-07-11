@@ -1,38 +1,27 @@
 ﻿<Properties StartupConfiguration="{B39668FD-E7BD-46E1-9E71-ECDEA1065120}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="MarketAPI/Controllers/CartController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MarketAPI/Startup.cs">
     <Files>
-      <File FileName="MarketAPI/Controllers/CartController.cs" Line="73" Column="21" />
-      <File FileName="MarketAPI/Controllers/MainPageController.cs" Line="36" Column="1" />
-      <File FileName="MarketAPI/Models/Furniture/Chair.cs" Line="1" Column="1" />
-      <File FileName="MarketAPI/Services/Repository.cs" Line="12" Column="34" />
-      <File FileName="MarketAPI/Interfaces/IRepository.cs" Line="21" Column="2" />
-      <File FileName="MarketAPI/Controllers/AccountController.cs" Line="99" Column="1" />
-      <File FileName="MarketAPI/Models/Identity/Cart.cs" Line="7" Column="28" />
-      <File FileName="MarketAPI/Models/Identity/AppUser.cs" Line="17" Column="34" />
-      <File FileName="MarketAPI/Services/CollectionProductsRepository.cs" Line="40" Column="100" />
-      <File FileName="MarketAPI/ViewModels/SignUpViewModel.cs" Line="35" Column="38" />
-      <File FileName="MarketAPI/Startup.cs" Line="74" Column="38" />
-      <File FileName="MarketAPI/Data/AppidentityDbContext.cs" Line="76" Column="41" />
-      <File FileName="MarketAPI/ViewModels/SignInViewModel.cs" Line="5" Column="18" />
-      <File FileName="MarketAPI/Extensions/SessionExtensions.cs" Line="15" Column="1" />
+      <File FileName="MarketAPI/Data/AppidentityDbContext.cs" Line="35" Column="38" />
+      <File FileName="MarketAPI/Models/Identity/AppUser.cs" Line="1" Column="1" />
+      <File FileName="MarketAPI/Startup.cs" Line="63" Column="70" />
+      <File FileName="MarketAPI/Services/CollectionProductsRepository.cs" />
+      <File FileName="MarketAPI/Services/Repository.cs" Line="12" Column="45" />
+      <File FileName="MarketAPI/Controllers/CartController.cs" />
+      <File FileName="MarketAPI/Interfaces/IRepository.cs" Line="8" Column="33" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="MarketAPI" expanded="True">
             <Node name="MarketAPI" expanded="True">
-              <Node name="Controllers" expanded="True">
-                <Node name="CartController.cs" selected="True" />
-              </Node>
+              <Node name="Controllers" expanded="True" />
               <Node name="Data" expanded="True" />
-              <Node name="Extensions" expanded="True" />
               <Node name="Interfaces" expanded="True" />
               <Node name="Models" expanded="True">
-                <Node name="Furniture" expanded="True" />
                 <Node name="Identity" expanded="True" />
               </Node>
               <Node name="Services" expanded="True" />
-              <Node name="ViewModels" expanded="True" />
+              <Node name="Startup.cs" selected="True" />
             </Node>
           </Node>
         </State>
@@ -50,10 +39,9 @@
       <Breakpoint file="/Users/mykytabortnyk/Projects/Market/MarketAPI/MarketClient/MainActivity.cs" relfile="MarketClient/MainActivity.cs" line="47" column="1" />
       <Breakpoint file="/Users/mykytabortnyk/Projects/Market/MarketAPI/MarketClient/MainActivity.cs" relfile="MarketClient/MainActivity.cs" line="54" column="1" />
       <Breakpoint file="/Users/mykytabortnyk/Projects/Market/MarketAPI/MarketAPI/Controllers/ChairsController.cs" relfile="MarketAPI/Controllers/ChairsController.cs" line="29" column="1" />
-      <Breakpoint file="/Users/mykytabortnyk/Projects/Market/MarketAPI/MarketAPI/Controllers/CartController.cs" relfile="MarketAPI/Controllers/CartController.cs" line="122" column="1" />
+      <Breakpoint file="/Users/mykytabortnyk/Projects/Market/MarketAPI/MarketAPI/Controllers/CartController.cs" relfile="MarketAPI/Controllers/CartController.cs" line="113" column="1" />
       <Breakpoint file="/Users/mykytabortnyk/Projects/Market/MarketAPI/MarketAPI/Controllers/AccountController.cs" relfile="MarketAPI/Controllers/AccountController.cs" line="96" column="1" />
-      <Breakpoint file="/Users/mykytabortnyk/Projects/Market/MarketAPI/MarketAPI/Controllers/CartController.cs" relfile="MarketAPI/Controllers/CartController.cs" line="63" column="1" />
-      <Breakpoint file="/Users/mykytabortnyk/Projects/Market/MarketAPI/MarketAPI/Controllers/CartController.cs" relfile="MarketAPI/Controllers/CartController.cs" line="71" column="1" />
+      <Breakpoint file="/Users/mykytabortnyk/Projects/Market/MarketAPI/MarketAPI/Controllers/CartController.cs" relfile="MarketAPI/Controllers/CartController.cs" line="56" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />

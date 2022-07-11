@@ -13,9 +13,9 @@ namespace MarketAPI.Controllers
     [Route("api/[controller]")]
     public class OfficeTablesController : Controller
     {
-        private readonly IChairRepository<OfficeTable> _repository;
+        private readonly IRepository<OfficeTable> _repository;
 
-        public OfficeTablesController(IChairRepository<OfficeTable> repository)
+        public OfficeTablesController(IRepository<OfficeTable> repository)
         {
             _repository = repository;
         }

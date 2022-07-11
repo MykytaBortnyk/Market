@@ -474,3 +474,4 @@
 /Users/mykytabortnyk/Projects/Market/MarketAPI/MarketAPI/obj/Debug/netcoreapp3.1/MarketAPI.dll
 /Users/mykytabortnyk/Projects/Market/MarketAPI/MarketAPI/obj/Debug/netcoreapp3.1/MarketAPI.pdb
 /Users/mykytabortnyk/Projects/Market/MarketAPI/MarketAPI/obj/Debug/netcoreapp3.1/MarketAPI.genruntimeconfig.cache
+/Users/mykytabortnyk/Projects/Market/MarketAPI/MarketAPI/obj/Debug/netcoreapp3.1/MarketAPI.csprojAssemblyReference.cache

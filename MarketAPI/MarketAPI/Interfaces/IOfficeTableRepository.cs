@@ -2,7 +2,7 @@
 
 namespace MarketAPI.Interfaces
 {
-    public interface IOfficeTableRepository : IChairRepository<OfficeTable>
+    public interface IOfficeTableRepository : IRepository<OfficeTable>
     {
     }
 }
